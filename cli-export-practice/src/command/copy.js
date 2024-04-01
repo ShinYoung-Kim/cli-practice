@@ -8,5 +8,5 @@ export const copyButton = () => {
 export const copy = new Command()
 	.name("copy")
 	.description("원하는 컴포넌트를 copy합니다.")
-	.action(async () => await copyButton())
+	.action(() => copyButton())
 	.parse();
