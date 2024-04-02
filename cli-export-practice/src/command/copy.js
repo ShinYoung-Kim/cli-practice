@@ -1,6 +1,19 @@
 import { Command } from "commander";
-import fs from "fs";
+import fs, { readFileSync } from "fs";
 import { Project, ScriptKind } from "ts-morph";
+import process from "process";
+import path from "path";
+
+export const writeButtonContentString = () => {
+	const content = readFileSync(
+		path.join(
+			process.cwd(),
+			"cli-export-practice/src/component/Button.tsx"
+		),
+		"utf-8"
+	);
+	fs.writeFileSync("buttonIndex.json", JSON.stringify(content), "utf-8");
+};
 
 export const getButtonContent = async () => {
 	const files = [
@@ -23,6 +36,7 @@ export const getButtonContent = async () => {
 };
 
 export const copyButton = async () => {
+	writeButtonContentString();
 	const content = await getButtonContent();
 	console.log(content);
 	fs.writeFile("copyButton.tsx", content, () => {});

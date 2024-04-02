@@ -1,0 +1,1 @@
+"function Button() {\r\n\treturn <button>버튼입니다</button>;\r\n}\r\n\r\nexport default Button;\r\n"
