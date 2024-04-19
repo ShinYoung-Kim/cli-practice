@@ -25,5 +25,9 @@
   },
   "bugs": {
     "url": "https://github.com/ShinYoung-Kim/cli-practice/issues"
+  },
+  "dependencies": {
+    "@primitives/lib-button": "^0.0.0",
+    "@primitives/lib-text": "^0.0.0"
   }
 }

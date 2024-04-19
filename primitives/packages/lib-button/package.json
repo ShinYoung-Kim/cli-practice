@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/ShinYoung-Kim/cli-practice/issues"
   },
-  "homepage": "https://github.com/ShinYoung-Kim/cli-practice#readme"
+  "homepage": "https://github.com/ShinYoung-Kim/cli-practice#readme",
+  "devDependencies": {
+    "react": "^16.14.0"
+  }
 }
