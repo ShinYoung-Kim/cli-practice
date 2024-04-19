@@ -19,7 +19,13 @@ export const getButtonContent = async () => {
 	const files = [
 		{
 			name: "button.tsx",
-			content: "function Button() { \n return <button>버튼입니다</button>;\n}\n\nexport default Button;",
+			content: readFileSync(
+				path.join(
+					process.cwd(),
+					"cli-export-practice/src/component/Button.tsx"
+				),
+				"utf-8"
+			),
 		},
 	];
 
