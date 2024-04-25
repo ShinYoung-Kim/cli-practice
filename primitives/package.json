@@ -10,6 +10,6 @@
 	"dependencies": {},
 	"scripts": {
 		"build": "lerna run build",
-		"graph": "nx graph"
+		"graph": "npx nx graph"
 	}
 }
