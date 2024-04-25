@@ -21,7 +21,8 @@
 		"url": "git+https://github.com/ShinYoung-Kim/cli-practice.git"
 	},
 	"scripts": {
-		"test": "node ./__tests__/@primitives/lib-builder.test.js"
+		"test": "node ./__tests__/@primitives/lib-builder.test.js",
+		"graph": "npx nx graph"
 	},
 	"bugs": {
 		"url": "https://github.com/ShinYoung-Kim/cli-practice/issues"

@@ -22,7 +22,8 @@
 	},
 	"scripts": {
 		"build": "lib-builder",
-		"test": "node ./__tests__/@primitives/lib-button.test.js"
+		"test": "node ./__tests__/@primitives/lib-button.test.js",
+		"graph": "npx nx graph"
 	},
 	"bugs": {
 		"url": "https://github.com/ShinYoung-Kim/cli-practice/issues"
