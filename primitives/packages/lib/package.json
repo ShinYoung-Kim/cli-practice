@@ -29,5 +29,8 @@
   "dependencies": {
     "@primitives/lib-button": "^0.0.0",
     "@primitives/lib-text": "^0.0.0"
+  },
+  "devDependencies": {
+    "@primitives/lib-builder": "^0.0.0"
   }
 }

@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/ShinYoung-Kim/cli-practice#readme",
   "devDependencies": {
+    "@primitives/lib-builder": "^0.0.0",
     "react": "^16.14.0"
   }
 }

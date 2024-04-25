@@ -1,7 +1,16 @@
-'use strict';
+const Text = (children) => {
+	return (
+		<span
+			style={{
+				fontSize: "16px",
+				lineHeight: "24px",
+				letterSpacing: "0.5px",
+				color: "#155EEF",
+			}}
+		>
+			{children}
+		</span>
+	);
+};
 
-module.exports = libText;
-
-function libText() {
-  return 'Hello from libText';
-}
+export default Text;

@@ -1,7 +1,18 @@
-'use strict';
+import Text from "@primitives/lib-text";
 
-module.exports = libButton;
+const Button = (children) => {
+	return (
+		<button
+			style={{
+				padding: "8px 16px",
+				borderRadius: "4px",
+				backgroundColor: "#000000",
+				border: "none",
+			}}
+		>
+			<Text>{children}</Text>
+		</button>
+	);
+};
 
-function libButton() {
-  return 'Hello from libButton';
-}
+export default Button;

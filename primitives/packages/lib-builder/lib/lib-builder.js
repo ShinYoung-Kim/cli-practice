@@ -1,7 +1,1 @@
-'use strict';
-
-module.exports = libBuilder;
-
-function libBuilder() {
-  return 'Hello from libBuilder';
-}
+console.log("Hello Bob the builder");
