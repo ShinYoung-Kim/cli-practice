@@ -29,5 +29,13 @@
 	"homepage": "https://github.com/ShinYoung-Kim/cli-practice#readme",
 	"bin": {
 		"lib-builder": "./lib/lib-builder.js"
+	},
+	"dependencies": {
+		"@babel/core": "^7.24.4",
+		"@babel/preset-env": "^7.24.4",
+		"@babel/preset-react": "^7.24.1",
+		"@rollup/plugin-babel": "^6.0.4",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"rollup": "^4.16.4"
 	}
 }
