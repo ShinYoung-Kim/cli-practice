@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const rollup = require("rollup");
 const path = require("path");
 const resolve = require("@rollup/plugin-node-resolve").default;
@@ -6,8 +7,11 @@ const postcss = require("rollup-plugin-postcss");
 
 const currentWorkingPath = process.cwd();
 const { src, name } = require(path.join(currentWorkingPath, "package.json"));
+
 const inputPath = path.join(currentWorkingPath, src);
+
 const fileName = name.replace("@primitives/", "");
+
 const inputOptions = {
 	input: inputPath,
 	external: ["react"],
@@ -33,10 +37,12 @@ const outputOptions = [
 		format: "esm",
 	},
 ];
+
 async function build() {
 	const bundle = await rollup.rollup(inputOptions);
 	outputOptions.forEach(async (options) => {
 		await bundle.write(options);
 	});
 }
+
 build();

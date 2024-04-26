@@ -5,13 +5,16 @@
 	"keywords": [],
 	"author": "ShinYoung-Kim <lukey0515@naver.com>",
 	"license": "ISC",
-	"main": "lib/lib-text.js",
+	"main": "dist/lib-text.cjs.js",
+	"module": "dist/lib-text.esm.js",
+	"src": "lib/lib-text.js",
 	"directories": {
 		"lib": "lib",
 		"test": "__tests__"
 	},
 	"files": [
-		"lib"
+		"lib",
+		"dist"
 	],
 	"publishConfig": {
 		"access": "public"
