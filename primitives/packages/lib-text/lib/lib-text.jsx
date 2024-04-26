@@ -1,4 +1,4 @@
-const Text = (children) => {
+const Text = ({ children }) => {
 	return (
 		<span
 			style={{

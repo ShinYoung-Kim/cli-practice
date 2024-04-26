@@ -1,6 +1,6 @@
-import Text from "@primitives/lib-text";
+// import Text from "@primitives/lib-text";
 
-const Button = (children) => {
+const Button = ({ children }) => {
 	return (
 		<button
 			style={{
@@ -10,7 +10,7 @@ const Button = (children) => {
 				border: "none",
 			}}
 		>
-			<Text>{children}</Text>
+			{children}
 		</button>
 	);
 };
