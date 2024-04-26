@@ -8,10 +8,11 @@ function getAbsolutePath(value) {
 	return dirname(require.resolve(join(value, "package.json")));
 }
 
-/** @type { import('@storybook/react-vite').StorybookConfig } */
+/** @type { import('@storybook/react-webpack5').StorybookConfig } */
 const config = {
-	stories: ["../packages/**/*.stories.js"],
+	stories: ["../packages/**/*.mdx", "../packages/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
 	addons: [
+		getAbsolutePath("@storybook/addon-webpack5-compiler-swc"),
 		getAbsolutePath("@storybook/addon-onboarding"),
 		getAbsolutePath("@storybook/addon-links"),
 		getAbsolutePath("@storybook/addon-essentials"),
@@ -19,9 +20,22 @@ const config = {
 		getAbsolutePath("@storybook/addon-interactions"),
 	],
 	framework: {
-		name: getAbsolutePath("@storybook/react-vite"),
-		options: {},
+		name: "@storybook/react-webpack5",
+		options: {
+			builder: {
+				useSWC: true,
+			},
+		},
 	},
+	swc: () => ({
+		jsc: {
+			transform: {
+				react: {
+					runtime: "automatic",
+				},
+			},
+		},
+	}),
 	docs: {
 		autodocs: "tag",
 	},
