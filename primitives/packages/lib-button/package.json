@@ -35,8 +35,5 @@
 	"devDependencies": {
 		"@primitives/lib-builder": "^1.0.0",
 		"react": "^16.14.0"
-	},
-	"dependencies": {
-		"@primitives/lib-text": "^1.0.0"
 	}
 }

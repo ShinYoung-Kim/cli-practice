@@ -38,10 +38,5 @@
 		"@rollup/plugin-babel": "^6.0.4",
 		"@rollup/plugin-node-resolve": "^15.2.3",
 		"rollup": "^4.16.4"
-	},
-	"devDependencies": {
-		"@primitives/lib": "^1.0.0",
-		"@primitives/lib-button": "^1.0.0",
-		"@primitives/lib-text": "^1.0.0"
 	}
 }
