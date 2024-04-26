@@ -1,0 +1,1 @@
+{"v":4,"entries":{"button--primary":{"type":"story","id":"button--primary","name":"Primary","title":"Button","importPath":"./packages/lib-button/lib/lib-button.stories.jsx","tags":["story"]},"text--primary":{"type":"story","id":"text--primary","name":"Primary","title":"Text","importPath":"./packages/lib-text/lib/lib-text.stories.jsx","tags":["story"]}}}
