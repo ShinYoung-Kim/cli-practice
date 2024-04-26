@@ -1,6 +1,6 @@
 {
 	"name": "@primitives/lib",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "> TODO: description",
 	"author": "ShinYoung-Kim <lukey0515@naver.com>",
 	"homepage": "https://github.com/ShinYoung-Kim/cli-practice#readme",
@@ -32,10 +32,10 @@
 		"url": "https://github.com/ShinYoung-Kim/cli-practice/issues"
 	},
 	"dependencies": {
-		"@primitives/lib-button": "^1.0.0",
-		"@primitives/lib-text": "^1.0.0"
+		"@primitives/lib-button": "^1.0.1",
+		"@primitives/lib-text": "^1.0.1"
 	},
 	"devDependencies": {
-		"@primitives/lib-builder": "^1.0.0"
+		"@primitives/lib-builder": "^1.0.1"
 	}
 }
