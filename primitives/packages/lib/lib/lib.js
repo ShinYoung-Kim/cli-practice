@@ -1,7 +1,4 @@
-'use strict';
+import Button from "@primitives/lib-button";
+import Text from "@primitives/lib-text";
 
-module.exports = lib;
-
-function lib() {
-  return 'Hello from lib';
-}
+export { Button, Text };
