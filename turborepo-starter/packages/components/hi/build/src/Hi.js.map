@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/Hi.tsx"],"sourcesContent":["import React from \"react\";\r\n\r\nconst Hi = () => {\r\n\treturn <div>hi</div>;\r\n};\r\n\r\nexport default Hi;\r\n"],"names":["React","Hi","div"],"rangeMappings":";;;;;;;","mappings":";AAAA,OAAOA,WAAW,QAAQ;AAE1B,IAAMC,KAAK;IACV,qBAAO,KAACC;kBAAI;;AACb;AAEA,eAAeD,GAAG"}
