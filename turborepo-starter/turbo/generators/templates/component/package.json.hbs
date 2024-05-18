@@ -1,12 +1,11 @@
 {
-  "name": "@nextui-org/{{componentName}}",
-  "version": "2.0.0",
+  "name": "@repo/{{componentName}}",
+  "version": "0.0.0",
   "description": "{{description}}",
   "keywords": [
     "{{componentName}}"
   ],
-  "author": "Junior Garcia <jrgarciadev@gmail.com>",
-  "homepage": "https://nextui.org",
+  "author": "ShinYoung-Kim <lukey0515@naver.com>",
   "license": "MIT",
   "main": "src/index.ts",
   "sideEffects": false,
@@ -16,39 +15,32 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nextui-org/nextui.git",
-    "directory": "packages/{{outDir}}/{{componentName}}"
-  },
-  "bugs": {
-    "url": "https://github.com/nextui-org/nextui/issues"
-  },
   "scripts": {
-    "build": "tsup src --dts",
-    "build:fast": "tsup src",
-    "dev": "pnpm build:fast --watch",
-    "clean": "rimraf dist .turbo",
-    "typecheck": "tsc --noEmit",
-    "prepack": "clean-package",
-    "postpack": "clean-package restore"
+    "build": "rollup -c",
+		"watch": "rollup -cw",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "peerDependencies": {
     "react": ">=18",
-    "react-dom": ">=18",
-    "@nextui-org/theme": ">=2.0.0",
-    "@nextui-org/system": ">=2.0.0"
-  },
-  "dependencies": {
-    "@nextui-org/shared-utils": "workspace:*",
-    "@nextui-org/react-utils": "workspace:*"
+    "react-dom": ">=18"
   },
   "devDependencies": {
-    "@nextui-org/theme": "workspace:*",
-    "@nextui-org/system": "workspace:*",
-    "clean-package": "2.2.0",
+    "@babel/core": "^7.24.5",
+		"@rollup/plugin-commonjs": "^25.0.7",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-node-resolve": "^15.2.3",
+		"@types/react": "^18.2.61",
+		"babel-preset-react-app": "^10.0.1",
+		"node-sass": "^9.0.0",
+		"postcss": "^8.4.38",
+		"postcss-loader": "^8.1.1",
+		"postcss-prefixer": "^3.0.0",
+		"rollup": "^4.17.2",
+		"rollup-plugin-peer-deps-external": "^2.2.4",
+		"rollup-plugin-postcss": "^4.0.2",
+		"rollup-plugin-typescript2": "^0.36.0",
+		"typescript": "^5.3.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
-  },
-  "clean-package": "../../../clean-package.config.json"
+  }
 }

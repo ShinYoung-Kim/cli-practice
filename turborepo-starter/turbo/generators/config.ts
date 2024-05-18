@@ -81,8 +81,8 @@ export default function generator(plop: PlopTypes.NodePlopAPI): void {
 			},
 			{
 				type: "add",
-				path: "{{ turbo.paths.root }}/packages/components/{{ dashCase file }}/tsup.config.ts",
-				templateFile: "templates/component/tsup.config.ts.hbs",
+				path: "{{ turbo.paths.root }}/packages/components/{{ dashCase file }}/rollup.config.ts",
+				templateFile: "templates/component/rollup.config.ts.hbs",
 			},
 		],
 	});
