@@ -8,10 +8,12 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=docs^... && changeset publish"
+    "release": "turbo run build --filter=docs^... && changeset publish",
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.2",
+    "@playwright/experimental-ct-react": "^1.44.0",
     "@playwright/test": "^1.44.0",
     "@types/node": "18.19.33",
     "prettier": "^3.2.5",
