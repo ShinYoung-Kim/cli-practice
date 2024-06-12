@@ -15,7 +15,6 @@
     "@changesets/cli": "^2.27.2",
     "@playwright/experimental-ct-react": "^1.44.0",
     "@playwright/test": "^1.44.0",
-    "@types/node": "18.19.33",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
