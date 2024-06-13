@@ -10,7 +10,13 @@
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/node": "^20.14.2"
+		"@types/node": "^20.14.2",
+		"gulp": "^5.0.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"gulp-svg-sprite": "^2.0.3",
+		"svg-sprite": "^2.0.4",
+		"vinyl": "^3.0.0"
+	}
 }
