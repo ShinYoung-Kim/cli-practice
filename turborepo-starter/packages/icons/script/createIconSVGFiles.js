@@ -1,7 +1,6 @@
 import path from "path";
 import fs from "fs";
 import process from "process";
-import { format } from "prettier";
 
 const iconsJSONPath = path.join(process.cwd(), "turborepo-starter/packages/icons/icons.json");
 const destinationPath = path.join(process.cwd(), "turborepo-starter/packages/icons/svg");
@@ -22,25 +21,13 @@ const toCamelCase = (id) => {
 			.join("") + rest.join("")
 	);
 };
+
+const extractSVGType = (id) => id.split("/")[1];
 const extractSegment = (id) => id.split("/").pop();
-const formatSVGId = (id) => toCamelCase(extractSegment(id));
+const formatSVGId = (id) => toCamelCase(extractSVGType(id) + extractSegment(id));
 
-const formatSVGFile = (svg) => {
-	const formattedSVG = format(svg, {
-		parser: "html",
-		printWidth: 80,
-		tabWidth: 2,
-		useTabs: false,
-		semi: true,
-		singleQuote: true,
-	});
-
-	return formattedSVG;
-};
-
-Object.values(iconsJSONFile).forEach(async ({ id, svg }) => {
+Object.values(iconsJSONFile).forEach(({ id, svg }) => {
 	const svgName = formatSVGId(id);
 	const svgPath = path.join(destinationPath, `${svgName}.svg`);
-	const formattedSVG = await formatSVGFile(svg);
-	fs.writeFileSync(svgPath, formattedSVG, "utf8");
+	fs.writeFileSync(svgPath, svg, "utf8");
 });
