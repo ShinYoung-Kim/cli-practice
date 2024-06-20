@@ -1,8 +1,9 @@
 import path from "path";
-import fs from "fs";
 import process from "process";
 
 export const ICON_JSON_FILE_PATH = path.join(process.cwd(), "turborepo-starter/packages/icons/icons.json");
+
+export const ICON_NAMES_FILE_PATH = path.join(process.cwd(), "turborepo-starter/packages/icons/constants");
 
 export const DEFAULT_INDIVIDUAL_ICONS_PATH = path.join(
 	process.cwd(),
