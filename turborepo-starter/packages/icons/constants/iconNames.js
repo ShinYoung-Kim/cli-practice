@@ -1,4 +1,4 @@
-const iconNames = [
+export const iconNames = [
 	"linearArrowDown",
 	"linearArrowLeft",
 	"linearArrowRight",
