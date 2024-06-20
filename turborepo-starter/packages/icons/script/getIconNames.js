@@ -1,33 +1,14 @@
 import path from "path";
 import fs from "fs";
-import process from "process";
 
-const iconsJSONPath = path.join(process.cwd(), "turborepo-starter/packages/icons/icons.json");
-const destinationPath = path.join(process.cwd(), "turborepo-starter/packages/icons/constants");
-
-const getIconJSON = () => {
-	const iconsJSON = fs.readFileSync(iconsJSONPath, "utf8");
-	return JSON.parse(iconsJSON);
-};
+import { ICON_NAMES_FILE_PATH } from "../constants/path.js";
+import { getIconJSON } from "./utils/getFile.js";
+import { getSVGName } from "./utils/transform.js";
 
 const iconsJSONFile = getIconJSON();
 
-const toCamelCase = (id) => {
-	const [first, ...rest] = id.split("-");
-	return (
-		first
-			.split("")
-			.map((char, index) => (index === 0 ? char.toLowerCase() : char))
-			.join("") + rest.join("")
-	);
-};
-
-const extractSVGType = (id) => id.split("/")[1];
-const extractSegment = (id) => id.split("/").pop();
-const formatSVGId = (id) => toCamelCase(extractSVGType(id) + extractSegment(id));
-
 const iconNameFile = `const iconNames = ${JSON.stringify(
-	Object.values(iconsJSONFile).map(({ id }) => formatSVGId(id))
+	Object.values(iconsJSONFile).map(({ id }) => getSVGName(id))
 )};`;
 
-fs.writeFileSync(path.join(destinationPath, "iconNames.js"), iconNameFile);
+fs.writeFileSync(path.join(ICON_NAMES_FILE_PATH, "iconNames.js"), iconNameFile);
