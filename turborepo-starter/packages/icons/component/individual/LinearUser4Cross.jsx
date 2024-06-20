@@ -1,0 +1,15 @@
+
+     const LinearUser4Cross = () => {
+        return (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.75 20V16.5" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 18.25H19.5" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 9.81C13.6569 9.81 15 8.46685 15 6.81C15 5.15315 13.6569 3.81 12 3.81C10.3431 3.81 9 5.15315 9 6.81C9 8.46685 10.3431 9.81 12 9.81Z" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4.5 20.19C4.50221 18.8495 4.86317 17.534 5.54542 16.3802C6.22767 15.2263 7.20633 14.276 8.37981 13.628C9.55329 12.9801 10.8788 12.658 12.2188 12.6953C13.5588 12.7326 14.8644 13.1278 16 13.84" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        );
+    };
+
+    export default LinearUser4Cross;
+    

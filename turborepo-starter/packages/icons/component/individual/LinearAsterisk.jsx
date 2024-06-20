@@ -1,0 +1,15 @@
+
+     const LinearAsterisk = () => {
+        return (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.46 8.46L15.54 15.54" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.54 8.46L8.46 15.54" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17 12H7" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M12 17V7" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        );
+    };
+
+    export default LinearAsterisk;
+    

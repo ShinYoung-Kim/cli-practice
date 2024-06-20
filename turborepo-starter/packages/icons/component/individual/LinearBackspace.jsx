@@ -1,0 +1,14 @@
+
+     const LinearBackspace = () => {
+        return (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 9.95999L15.07 14.04" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.07 9.95999L11 14.04" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M7.99999 17H18.36C18.8904 17 19.3991 16.7893 19.7742 16.4142C20.1493 16.0391 20.36 15.5304 20.36 15V9C20.36 8.46957 20.1493 7.96086 19.7742 7.58579C19.3991 7.21071 18.8904 7 18.36 7H7.99999C7.70039 7.00019 7.40467 7.06768 7.13465 7.19749C6.86464 7.32731 6.62724 7.51613 6.43999 7.75L4.03999 10.75C3.75599 11.1047 3.60124 11.5456 3.60124 12C3.60124 12.4544 3.75599 12.8953 4.03999 13.25L6.43999 16.25C6.62724 16.4839 6.86464 16.6727 7.13465 16.8025C7.40467 16.9323 7.70039 16.9998 7.99999 17Z" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        );
+    };
+
+    export default LinearBackspace;
+    

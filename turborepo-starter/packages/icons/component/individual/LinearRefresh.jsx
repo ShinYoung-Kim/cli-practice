@@ -1,0 +1,15 @@
+
+     const LinearRefresh = () => {
+        return (
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.85003 15.48C2.97183 13.6285 2.77456 11.5267 3.2929 9.54413C3.81123 7.56157 5.01199 5.82525 6.68399 4.64051C8.356 3.45578 10.3922 2.8985 12.4345 3.06667C14.4767 3.23485 16.3943 4.11771 17.85 5.56" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.56 3.50999V6.24999H15.82" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.15 8.52C21.0282 10.3715 21.2255 12.4733 20.7072 14.4559C20.1888 16.4384 18.9881 18.1747 17.3161 19.3595C15.6441 20.5442 13.6079 21.1015 11.5656 20.9333C9.5233 20.7652 7.6057 19.8823 6.15002 18.44" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5.44 20.49V17.75H8.18" stroke="#000D26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+        );
+    };
+
+    export default LinearRefresh;
+    
