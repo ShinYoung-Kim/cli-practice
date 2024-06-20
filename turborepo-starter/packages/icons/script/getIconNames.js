@@ -7,7 +7,7 @@ import { getSVGName } from "./utils/transform.js";
 
 const iconsJSONFile = getIconJSON();
 
-const iconNameFile = `const iconNames = ${JSON.stringify(
+const iconNameFile = `export const iconNames = ${JSON.stringify(
 	Object.values(iconsJSONFile).map(({ id }) => getSVGName(id))
 )};`;
 
