@@ -38,7 +38,7 @@ const createBarrelFile = () => {
 		})
 		.join("\n");
 
-	fs.writeFileSync(path.join(DEFAULT_INDIVIDUAL_ICON_COMPONENTS_PATH, "index.js"), barrelFileContent, "utf8");
+	fs.writeFileSync(path.join(DEFAULT_INDIVIDUAL_ICON_COMPONENTS_PATH, "index.jsx"), barrelFileContent, "utf8");
 };
 
 createIndividualIconComponents();
