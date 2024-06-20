@@ -1,33 +1,10 @@
-import path from "path";
 import fs from "fs";
-import process from "process";
 
-const iconsJSONPath = path.join(process.cwd(), "turborepo-starter/packages/icons/icons.json");
-const destinationPath = path.join(
-	process.cwd(),
-	"turborepo-starter/packages/icons/files/sprites/defaultSVGSprites.svg"
-);
-
-const getIconJSON = () => {
-	const iconsJSON = fs.readFileSync(iconsJSONPath, "utf8");
-	return JSON.parse(iconsJSON);
-};
+import { DEFAULT_SVG_SPRITES_PATH } from "../constants/path.js";
+import { getIconJSON } from "./utils/getFile.js";
+import { getSVGName } from "./utils/transform.js";
 
 const iconsJSONFile = getIconJSON();
-
-const toCamelCase = (id) => {
-	const [first, ...rest] = id.split("-");
-	return (
-		first
-			.split("")
-			.map((char, index) => (index === 0 ? char.toLowerCase() : char))
-			.join("") + rest.join("")
-	);
-};
-
-const extractSVGType = (id) => id.split("/")[1];
-const extractSegment = (id) => id.split("/").pop();
-const formatSVGId = (id) => toCamelCase(extractSVGType(id) + extractSegment(id));
 
 const generateIconSvgContents = (svg, name) => {
 	return svg
@@ -45,7 +22,7 @@ const generateIconSvgContents = (svg, name) => {
 let generatedIcons = "";
 
 Object.values(iconsJSONFile).forEach(({ id, svg }) => {
-	const svgName = formatSVGId(id);
+	const svgName = getSVGName(id);
 	generatedIcons += generateIconSvgContents(svg, svgName);
 });
 
@@ -55,4 +32,4 @@ const iconSpriteFile = `
 </svg>
 `;
 
-fs.writeFileSync(destinationPath, iconSpriteFile, "utf8");
+fs.writeFileSync(DEFAULT_SVG_SPRITES_PATH, iconSpriteFile, "utf8");

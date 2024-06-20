@@ -1,7 +1,13 @@
 import { format } from "prettier";
 import path from "path";
 import fs from "fs";
-import process from "process";
+
+import {
+	DEFAULT_INDIVIDUAL_ICONS_PATH,
+	FORMATTED_INDIVIDUAL_ICONS_PATH_JS,
+	OPTIMIZED_SVG_SPRITES_PATH,
+	FORMATTED_OPTIMIZED_SVG_SPRITES_PATH,
+} from "../constants/path.js";
 
 const formatSVGFile = (svg) => {
 	const formattedSVG = format(svg, {
@@ -17,29 +23,18 @@ const formatSVGFile = (svg) => {
 };
 
 const convertIconSpriteFile = async () => {
-	const iconSpriteFilePath = path.join(
-		process.cwd(),
-		"turborepo-starter/packages/icons/files/sprites/optimizedSVGSprites.svg"
-	);
-	const iconSpriteFileDestinationPath = path.join(
-		process.cwd(),
-		"turborepo-starter/packages/icons/files/sprites/formattedOptimizedSVGSprites.svg"
-	);
-	const iconSpriteFile = fs.readFileSync(iconSpriteFilePath, "utf8");
-	fs.writeFileSync(iconSpriteFileDestinationPath, await formatSVGFile(iconSpriteFile), "utf8");
+	const iconSpriteFile = fs.readFileSync(OPTIMIZED_SVG_SPRITES_PATH, "utf8");
+	fs.writeFileSync(FORMATTED_OPTIMIZED_SVG_SPRITES_PATH, await formatSVGFile(iconSpriteFile), "utf8");
 };
 
 const convertIconSVGFiles = async () => {
-	const iconSVGFilesPath = path.join(process.cwd(), "turborepo-starter/packages/icons/files/individual/default");
-	const iconSVGFilesDestinationPath = path.join(
-		process.cwd(),
-		"turborepo-starter/packages/icons/files/individual/formatted"
-	);
-	const iconSVGFiles = fs.readdirSync(iconSVGFilesPath);
+	const iconSVGFiles = fs.readdirSync(DEFAULT_INDIVIDUAL_ICONS_PATH);
 	iconSVGFiles.forEach(async (iconSVGFile) => {
 		fs.writeFileSync(
-			path.join(iconSVGFilesDestinationPath, iconSVGFile),
-			await formatSVGFile(fs.readFileSync(path.join(iconSVGFilesPath, iconSVGFile), "utf8")),
+			path.join(FORMATTED_INDIVIDUAL_ICONS_PATH_JS, iconSVGFile),
+			await formatSVGFile(
+				fs.readFileSync(path.join(DEFAULT_INDIVIDUAL_ICONS_PATH, iconSVGFile), "utf8")
+			),
 			"utf8"
 		);
 	});
