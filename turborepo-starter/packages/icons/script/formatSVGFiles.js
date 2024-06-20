@@ -17,18 +17,24 @@ const formatSVGFile = (svg) => {
 };
 
 const convertIconSpriteFile = async () => {
-	const iconSpriteFilePath = path.join(process.cwd(), "turborepo-starter/packages/icons/sprites/icons.svg");
+	const iconSpriteFilePath = path.join(
+		process.cwd(),
+		"turborepo-starter/packages/icons/files/sprites/optimizedSVGSprites.svg"
+	);
 	const iconSpriteFileDestinationPath = path.join(
 		process.cwd(),
-		"turborepo-starter/packages/icons/sprites/formattedIcons.svg"
+		"turborepo-starter/packages/icons/files/sprites/formattedOptimizedSVGSprites.svg"
 	);
 	const iconSpriteFile = fs.readFileSync(iconSpriteFilePath, "utf8");
 	fs.writeFileSync(iconSpriteFileDestinationPath, await formatSVGFile(iconSpriteFile), "utf8");
 };
 
 const convertIconSVGFiles = async () => {
-	const iconSVGFilesPath = path.join(process.cwd(), "turborepo-starter/packages/icons/svg");
-	const iconSVGFilesDestinationPath = path.join(process.cwd(), "turborepo-starter/packages/icons/formattedSVG");
+	const iconSVGFilesPath = path.join(process.cwd(), "turborepo-starter/packages/icons/files/individual/default");
+	const iconSVGFilesDestinationPath = path.join(
+		process.cwd(),
+		"turborepo-starter/packages/icons/files/individual/formatted"
+	);
 	const iconSVGFiles = fs.readdirSync(iconSVGFilesPath);
 	iconSVGFiles.forEach(async (iconSVGFile) => {
 		fs.writeFileSync(

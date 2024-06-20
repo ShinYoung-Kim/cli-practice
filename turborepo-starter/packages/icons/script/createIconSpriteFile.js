@@ -3,7 +3,10 @@ import fs from "fs";
 import process from "process";
 
 const iconsJSONPath = path.join(process.cwd(), "turborepo-starter/packages/icons/icons.json");
-const destinationPath = path.join(process.cwd(), "turborepo-starter/packages/icons/sprites/generatedIcons.svg");
+const destinationPath = path.join(
+	process.cwd(),
+	"turborepo-starter/packages/icons/files/sprites/defaultSVGSprites.svg"
+);
 
 const getIconJSON = () => {
 	const iconsJSON = fs.readFileSync(iconsJSONPath, "utf8");

@@ -6,18 +6,18 @@ const iconSpriteFilePath = path.join(process.cwd());
 
 const createIconSpriteFile = () => {
 	return gulp
-		.src("svg/**/*.svg")
+		.src("files/individual/default/**/*.svg")
 		.pipe(
 			svgSprite({
 				mode: {
 					symbol: {
 						dest: iconSpriteFilePath,
-						sprite: "icons.svg",
+						sprite: "files/sprites/optimizedSVGSprites.svg",
 					},
 				},
 			})
 		)
-		.pipe(gulp.dest("sprites"));
+		.pipe(gulp.dest("./"));
 };
 
 export default createIconSpriteFile;
