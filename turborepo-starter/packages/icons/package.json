@@ -15,7 +15,11 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
 		"gulp-svg-sprite": "^2.0.3",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
 		"svg-sprite": "^2.0.4",
 		"vinyl": "^3.0.0"
 	}
