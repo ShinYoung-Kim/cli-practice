@@ -1,0 +1,26 @@
+import * as React from "react";
+const SvgLinearBagTick = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}
+  >
+    <path
+      stroke="#000D26"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="m6.14 10.33 1.33 8a2 2 0 0 0 2 1.67h5.12a2 2 0 0 0 2-1.67l1.33-8a2 2 0 0 0-2-2.33H8.11a2 2 0 0 0-1.97 2.33"
+    />
+    <path
+      stroke="#000D26"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={1.5}
+      d="M9.6 9V6.4A2.41 2.41 0 0 1 12 4a2.41 2.41 0 0 1 2.4 2.4V9M9.15 14.22 10.94 16l3.91-3.91"
+    />
+  </svg>
+);
+export default SvgLinearBagTick;
