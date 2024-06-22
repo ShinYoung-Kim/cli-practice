@@ -4,6 +4,9 @@ import { iconNames } from "../../constants/iconNames";
 const meta = {
 	component: SpriteIcon,
 	title: "Icons/SpriteIcon",
+	args: {
+		name: "linearWallet",
+	},
 	argTypes: {
 		name: {
 			control: "select",
