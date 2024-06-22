@@ -8,7 +8,6 @@ const IconList = () => {
 	return (
 		<div>
 			{iconNames.map((name) => {
-				console.log(name);
 				const IndividualComponent = IndividualIcon[toPascalCase(name)];
 				const SVGRComponent = SVGRIcon[toPascalCase(name)];
 				return (
