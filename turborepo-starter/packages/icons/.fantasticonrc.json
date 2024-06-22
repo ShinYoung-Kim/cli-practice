@@ -1,0 +1,28 @@
+{
+	"inputDir": "./files/individual/default",
+	"outputDir": "./fonts",
+	"fontTypes": ["ttf", "woff", "woff2"],
+	"assetTypes": ["ts", "css", "json", "html"],
+	"fontsUrl": "/static/fonts",
+	"formatOptions": {
+		"woff": {
+			"metadata": "..."
+		},
+		"json": {
+			"indent": 2
+		},
+		"ts": {
+			"types": ["constant", "literalId"],
+			"singleQuotes": true,
+			"enumName": "IconType",
+			"constantName": "ICON_TYPE"
+		}
+	},
+	"templates": {
+		"css": "./fonts.css.hbs"
+	},
+	"pathOptions": {
+		"ts": "./iconTypes.ts",
+		"json": "./iconTypes.json"
+	}
+}
